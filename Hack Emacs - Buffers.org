@@ -1,0 +1,29 @@
+* Buffer Concept
+  - Buffers aren't files!
+  - You can view the same buffer in multiple places and/or ways.
+
+* Speeding Up Buffer Access
+  - Two available modes
+    - ido-mode (Emacs 22+)
+    - iswitchb-mode (Emacs 21)
+
+  - With either of these modes, you still use C-x b
+  - Rotate through available buffers with C-s and C-r
+  - Filter buffers by typing!
+  - Kill buffers from the menu with C-k
+  - Create a new buffer by typing the name 
+    - Press enter twice in ido-mode
+    - Press y in iswitchb-mode
+
+* Selecting Buffers
+
+ - Use C-x b
+
+* Killing Buffers
+
+ - Use C-x k
+
+* Read More
+
+ - Emacs Manual (Use C-h r)
+ - Menu item: Buffers

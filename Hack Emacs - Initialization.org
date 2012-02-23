@@ -1,0 +1,25 @@
+* Emacs Initialization
+** Just a simple case of programming
+   You define or modify variables and functions within the Emacs
+   environment.  That's all programming really is!
+** Two use cases
+*** Store some settings you customized
+    Use the customization system!
+    - Available from C-h v
+**** Example: scroll-conservatively
+*** Add/modify parts of your editor
+    Many ways to accomplish this:
+**** Use .emacs
+     Good for simple customizations
+     This goes in your home directory (~/.emacs).
+***** Examples
+****** Parenthesis matching
+****** Scrolling behavior
+****** Line wrapping
+****** And tons more...
+**** Use .emacs.d/ directory
+     Good for keep a library of your own functions
+***** Example: cutting edge org-mode
+**** Side note: if you're a programmer, you might enjoy org-babel
+     Literate programming for your Emacs initialization
+***** Example: My Emacs initialization!

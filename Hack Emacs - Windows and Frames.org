@@ -1,0 +1,31 @@
+* Windows
+  - A "window" a division of the current Emacs window
+
+  - To create a new window from the current window
+    - C-x 2 (horizontal split) 
+    - C-x 3 (vertical split)
+
+  - To destroy the window where the point is currently
+    - C-x 0
+
+  - To destroy all windows except where the point is currently
+    - C-x 1
+
+  - To switch between windows
+    - C-x o  (think of it as (O)ther window)
+
+* Frames
+ - "Frames" are what you probably think of as windows!
+ - In general, frame operations place a "5" after the C-x and before the command
+
+ - To switch to a buffer by opening it in a new frame
+   - C-x 5 b
+
+ - To close the current frame
+   - C-x 5 0
+
+ - To open a file in a new frame
+   - C-x 5 f
+
+ - To switch between frames
+   - C-x 5 o

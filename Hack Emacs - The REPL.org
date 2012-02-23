@@ -1,0 +1,52 @@
+* Overview of Programming with Emacs
+  - Advantages
+    - Extremely broad language support
+    - Excellent generic text editing capabilities
+    - Works in a console and in a windowing system
+    - *Easily* programmable
+    - Extremely good version control system support (see magit)
+  - Disadvantages
+    - Not designed to semantically analyze the code on-the-fly
+    - Weak when it comes to things like e.g. "Intellisense"
+* Addressing the disadvantages
+  - Time honored approach: the REPL
+  - Allows for development of large programs in small, testable pieces
+* The REPL
+  - Stands for the "Read-Eval-Print Loop"
+  - Very intuitive
+  - Broad language support
+    - Emacs Lisp (see "M-x ielm")
+    - Python
+    - Ruby
+    - Scala
+    - Common Lisp (see SLIME)
+    - Clojure (has SLIME support)
+    - Javascript (see Rhino)
+    - Perl (see Sepia)
+    - R
+    - Mathematica
+    - Lua
+    - ...
+** Using the REPL
+   There are two very simple ways to use a REPL:
+
+   1. Write code at the REPL, and when you get it working, paste it
+      into your buffer in Emacs so you can save it
+   2. Write code in your buffer and paste it in the REPL to test it.
+      When it breaks, go back to the buffer and edit it and try again.
+
+   These are good ways to use a REPL, but they wear on you, so various
+   languages and/or modes have added convenience functions that make
+   using the REPL faster and easier.  We'll look at two today:
+
+   1. Emacs Lisp
+      1. "Embedded" REPL
+      2. IELM
+   2. Scheme
+
+** Final note: not all REPLs are created equal
+   The vary in their implementation
+   - Perl and Scala don't have real interpreters
+   - SLIME-based implementations have servers running in the native language (lisp) that communicate with Emacs over a socket
+   - Simple REPLs can use a comint-mode derivative with same basic mode-level functions to dispatch code to the buffer running the interpreter subprocess
+     - This is how most first-cuts at a REPLs are implemented for "new" languages

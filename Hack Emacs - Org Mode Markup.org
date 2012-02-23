@@ -1,0 +1,64 @@
+* Org-Mode Markup
+  Text in Org Mode can be /marked up/ with various characters to give it style.  This affects:
+  - The way the text appears in the buffer
+  - The way the text /behaves/ in the buffer (potentially)
+  - The way the text appears and behaves when it is exported
+    - This can vary widely, depending on the backend used for exporting (HTML, \LaTeX, plain text, etc.)
+    - More on exporting in another Org Mode In Depth episode
+** Fonts and color themes
+   Depending on what color theme and font settings you have, you might
+   be able to see that the text is marked up.  For example, look at
+   this /italic/, *bold* and _underlined_ text in two different color
+   themes:
+   - [[elisp:(color-theme-high-contrast)][High Contrast]]
+   - [[elisp:(color-theme-comidia)][Comidia]]
+** Simple markup
+   Most markup in Org Mode just adds some symbols (like *, _, /, [, ],
+   and \) to normal text to tell Org Mode that the text is special in
+   some way.
+   - *bold*
+   - /italic/
+   - _underline_
+   - Links are automatically "linkified" http://google.com
+     - http://emacswiki.org
+     - They can be opened by clicking on them or...
+     - by pressing C-c C-o
+   - Use the format
+     : [[http://google.com][Google]]
+     without the ":" to create a link. It will look like this:
+     [[http://google.com][Google]]
+   - As you notice above, you can avoid special markup processing by
+     beginning your line with ": "
+** Symbols
+   - If you writing text (especially technical notes) that require
+     symbols, Org Mode seamlessly supports \LaTeX symbols syntax:
+     - Union and Intersection: \cup \cap
+     - Greek characters: \pi \Sigma \alpha \beta
+     - Mathematical relations: x \le y
+     - Chemical reactions (in this case, electrolysis of water): 2H_{2}O \rightarrow 2H_2 + O_2
+     - Superscripts: x * x = x^2
+     - and many others (go a [[http://www.google.com/search?hl=en&source=hp&q=+latex+symbols&aq=f&aqi=&aql=&oq=&gs_rfai=][Google Search]] for "latex symbols")
+** Links
+   Links probably warrant an entire episode of their own.  But...
+   - Links can be any of a ton of types, the most obvious being things like:
+     - ftp://
+     - http://
+     - file:
+     - mailto:
+   - But also including awesome types like:
+     - elisp:
+     - shell:
+   - These kinds of powerful links give you the ability to write Org
+     Mode files that are programs that have "buttons" that invoke
+     code
+*** Examples (for fun)
+    - [[elisp:(color-theme-subtle-hacker)]]
+      : [[elisp:(color-theme-subtle-hacker)]]
+    - [[elisp:(color-theme-comidia)][Comidia]]
+      : [[elisp:(color-theme-comidia)][Comidia]]
+    - [[shell:ls -lR]]
+      :  [[shell:ls -lR]]
+    - We can jump to a specific line in a file.  Here's a link to notes from a previous episode on using a [[file:Hack%20Emacs%20-%20Org.org::13][personal wiki]].
+      : [[file:Hack Emacs - Org.org::13][personal wiki]].
+    - We can search for the headline "Org Remember" with a [[file:Hack%20Emacs%20-%20Org.org::Org%20Remember][similar syntax]]
+      : [[file:Hack Emacs - Org.org::Org Remember][similar syntax]]

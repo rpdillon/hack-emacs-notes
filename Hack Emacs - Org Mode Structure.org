@@ -1,0 +1,50 @@
+* Org-Mode Structure
+  The content of this section will review the high points of section 2
+  of the Org-Mode Manual "Document Structure"
+** Headlines start with a "*" character and start at column 0
+   - The way the buffer is displayed can be changed by activating "Clean View"
+     - Kind of a new feature, might not be available unless you're
+       using 23.1+ Emacs with 6.29+ Org-Mode
+     - Can be toggled with M-x org-indent-mode
+   - Different levels of headlines are color-coded so you can see structure easily
+** Focusing on a section of the structure
+   There are two main ways to focus your (or your viewers') attention
+   on just one section of the structure.
+*** Visibility cycling
+    - Each headline or list has three possible visibility states:
+      1. Completely visible
+      2. Only Headlines visible
+      3. Completely folded (only top headline visible)
+    - Pressing <tab> on a headline folds the structure under the headline
+    - Pressing <shift>-<tab> cycles through visibility levels for *all* headlines
+*** Buffer narrowing
+    - Buffer narrowing limits the /view/ of the current buffer,
+      allowing commands that normally operate on the entire buffer to
+      be applied to a speific region.
+      - Search/Replace
+      - Export (in the case of Org-Mode)
+    - It also allows you to focus entirely on a single area of the org file
+      - Narrow the buffer to a subtree using C-x n s
+      - Widen the view back to the entire buffer with C-x n w
+** Working with Lists
+   - Lists come in two flavors: bullet lists and numbered lists
+     - These correspond exactly to ordered lists and unordered lists
+       in HTML (<ol> and <ul>, respectively)
+   - You can change the nature of a list using <shift>-<left> and
+     <shift>-<right> while focused an an elemment of the list
+** Movement within the Structure
+   - Move to the previous headline with C-c C-p (previous)
+   - Move to the next headline with C-c C-n (next)
+   - Move to the next higher headline in the structure with C-c C-u
+   - Move to headlines at the same level with C-c C-f and C-c C-b (forward and back)
+** Modifying the Structure
+*** Inserting headlines
+    - The most basic command is M-<return>, which, if you're on a new
+      line, adds new headline at the current level.
+      - If you're within a list, adds a new item to the list
+    - If you're within a headline, you can add a new headline at the
+      current level using C-<return>
+*** Moving, Promoting and Demoting Items
+    - Single items, either list items or headlines, can be moved up and down with M-<up> and M-<down>
+    - Single items (again, list items or headlines) can be promoted or demoted with M-<left> and M-<right>
+    - Entire subtrees can be promoted or demoted with M-S-<left> and M-S-<right>

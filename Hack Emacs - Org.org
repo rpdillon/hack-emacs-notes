@@ -1,0 +1,42 @@
+* Org Mode
+** Outline Processor
+ - It's a great example of the power of exposing the language the editor was written in -- an entire application written in Emacs Lisp!
+ - Now included in GNU Emacs (22+)
+*** Supports structural editing
+    - Headlines
+    - Bullet Lists
+    - Numbered Lists
+    - Visibility cycling
+    - Drawers, block quotes, properties, and much more.
+*** Sticks to plain text!
+That means you can access and edit the content of your org files regardless of the operating system or computational capabilities of the platform you're on!
+** Personal Wiki
+   - Linking
+     - http://orgmode.org
+     - http://google.com
+     - [[http://google.com][Google]]
+     - [[Outline Processor][Searches]]
+     - Radio linking, anchors, much more
+   - Markup
+     - /italic/
+     - *bold*
+     - _underline_
+** Export
+*** Document creation
+    - LaTeX
+    - HTML
+    - Plain text
+    - many more!
+** Much more!
+*** Org babel - embed executable code in your documents
+*** Agenda - manage TODO, deadlines, priorities, appointments, etc.
+**** TODO Make more Hack Emacs videos on org mode [2010-10-07 Thu]
+*** Org Remember
+*** Example: Tables and Spreadsheets
+| Rank↓ | City↓    | Population↓        | Area (km²)↓ | Population density (/km²)↓ | Country↓ |
+|-------+----------+--------------------+-------------+----------------------------+----------|
+|     1 | Shanghai | 13,831,900 [7]     | 1,928       | 7,174                      | China    |
+|     2 | Mumbai   | 13,830,884[9]      | 603         | 22,937                     | India    |
+|     3 | Karachi  | 12,991,000[10]     | 3,527       | 3,683                      | Pakistan |
+|     4 | Delhi    | 12,565,901[9]      | 431.09[11]  | 29,149                     | India    |
+|     5 | Istanbul | 12,517,664[12][13] | 1,831       | 6,211                      | Turkey   |

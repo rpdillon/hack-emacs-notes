@@ -1,0 +1,48 @@
+* Demo
+  - Problem: let's say you need to generate a web page with a table of
+    the files in a directory, along with their size (in bytes) and
+    modification date and time
+    - They should be sorted by modification date
+    - The table should include the total size of all the files
+** Example
+|    |       Date |  Time |  Size | Name                                |
+|----+------------+-------+-------+-------------------------------------|
+|  1 | 2010-08-26 | 23:51 |  2345 | Hack Emacs - Introduction.org       |
+|  2 | 2010-08-27 | 23:15 |   639 | Hack Emacs - Buffers.org            |
+|  3 | 2010-08-27 | 23:38 |   744 | Hack Emacs - Windows and Frames.org |
+|  4 | 2010-08-29 | 01:38 |  2081 | Hack Emacs - Mark and Point.org     |
+|  5 | 2010-10-06 | 22:03 |  1848 | Hack Emacs - Org.org                |
+|  6 | 2010-10-09 | 23:42 |   894 | Hack Emacs - Initialization.org     |
+|  7 | 2011-01-29 | 15:24 |  1218 | Hack Emacs - Customization.org      |
+|  8 | 2011-03-09 | 19:12 |  1593 | Hack Emacs - Using dotemacs.org     |
+|  9 | 2011-05-19 | 17:21 |  2777 | Hack Emacs - Org Mode Structure.org |
+| 10 | 2011-05-24 | 10:01 |  3092 | Hack Emacs - Org Mode Markup.org    |
+| 11 | 2011-05-24 | 16:20 |  1281 | Hack Emacs - Tables.org             |
+|----+------------+-------+-------+-------------------------------------|
+|    |            |       | 18512 |                                     |
+   #+TBLFM: @13$4=vsum(@2..@12)
+
+* Tables
+  - This was originally going to be part of markup, but there is too
+    much to cover at a useful pace, so it gets its own episode.
+  - Navigate with <tab> and <shift>-<tab>
+  - Tables export cleanly to ASCII, HTML and LaTeX
+** Getting data into tables
+   - You can use C-u M-! to insert the result of shell commands into
+     the current buffer at point
+   - Use C-c | to grab the region and convert it
+     - By default, it will look for tabs, and if there are none, will
+       divide on whitespace
+     - You can invoke this with a numeric argument to specify a number
+       of spaces dividing the columns
+** Working with tables
+*** Movement
+    - Move rows with M-<up> and M-<down>
+    - Move columns with M-<left> and M-<right>
+*** Inserting and Deleting
+    - Delete columns with M-S-<left>
+    - Insert columns with M-S-<right>
+    - Insert horizontal rule with C-c <return>
+*** Misc
+    - Sort with C-c ^
+    - S-<return> copies the value down, incrementing numeric values

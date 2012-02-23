@@ -1,0 +1,46 @@
+* What is the "point"?  =)
+  - In Emacs jargon, the "point" is what you probably think of as the "cursor" in other programs.
+  - You move the point tons of ways, but the most obvious are motion commands:
+
+    | Command             | Key Combination |
+    |---------------------+-----------------|
+    | Next line           | C-n             |
+    | Previous line       | C-p             |
+    | Next character      | C-f             |
+    | Previous character  | C-b             |
+    |                     |                 |
+    | Next word           | M-f             |
+    | Previous word       | M-b             |
+    |                     |                 |
+    | Beginning of line   | C-a             |
+    | End of line         | C-e             |
+    |                     |                 |
+    | Beginning of buffer | M-<             |
+    | End of buffer       | M->             |
+
+  - You can also use the arrow keys to move the point
+    - Learning the above keys will be much faster in the long run, though
+
+* What is the "mark"?
+  - The mark is an invisible location that you set in the text.  It is multi-purpose:
+    - In conjunction with the point, it defines a region ("selection") of text
+    - It can be used to store a position in the text that you can jump quickly to it
+
+  - Set the mark with C-space
+
+** Killing and yanking back text from the kill ring
+   - Kill the text between the mark and the point with C-w
+   - Copy the text between the mark and the point with M-w
+   - Yank text back from the kill ring with C-y
+
+** Other Mark Operations
+   - Swap the mark and the point with C-x C-x
+     - Great for temporary "bookmarks"
+
+** Transient Mark Mode
+   - In Emacs 23+, transient-mark-mode is the default mode.
+   - If you disable transient-mark-mode, the region is not visible, but can still be used
+     - This is useful in situations where you frequently use the mark
+       for purposes other than just killing and yanking text
+   - transient-mark-mode can be toggled by executing the function transient-mark-mode:
+     - M-x transient-mark-mode

@@ -1,0 +1,32 @@
+* Naming
+  ".emacs" is actually shorthand.  Your initialization file could be any of:
+  - ~/.emacs
+  - ~/.emacs.el
+  - ~/.emacs.d/init.el
+* Initialization files are just elisp
+  You can run anything you like.  But, if you want Emacs to start
+  quickly, make sure that nothing too intensive gets run from your
+  init file.
+  - Loading large add-on packages can take a lot of time
+    - Consider using "autoload" or "idle-require" in these cases
+    - Make sure to use "byte-recompile-directory" to make sure your
+      add-ons are optimized for loading
+* Try out your commands before using them
+  - Use the ever-useful *scratch* buffer
+  - If you want, use ielm (Interactive Emacs Lisp Mode)
+  - If you need to test commands in a specific buffer, use M-: to
+    evaluate lisp on-the-fly
+* Make your commands idempotent
+  - Use "eval-buffer" to test your init file, rather than restarting Emacs
+  - Examples:
+    - [[elisp:(column-number-mode%201)][(column-number-mode 1)]] vs [[elisp:(column-number-mode)][(column-number-mode)]]
+* Basic useful examples (to get you started)
+  - Modes
+    - [[elisp:(column-number-mode%201)][(column-number-mode 1)]]
+    - [[elisp:(ido-mode%201)][(ido-mode 1)]]
+    - [[elisp:(show-paren-mode%201)][(show-paren-mode 1)]]
+    - [[elisp:(global-visual-line-mode 1)][(global-visual-line-mode 1)]]
+    - [[elisp:(mouse-avoidance-mode%20'banish)][(mouse-avoidance-mode 'banish)]]
+  - Accelerators
+    - [[elisp:(global-set-key "\C-xc" 'calendar)][(global-set-key "\C-xc" 'calendar)]]
+    - [[elisp:(global-set-key "\C-xt" 'eshell)][(global-set-key "\C-xt" 'eshell)]]

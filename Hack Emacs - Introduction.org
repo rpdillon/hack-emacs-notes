@@ -1,0 +1,73 @@
+* Overview
+** Goals
+Use videos to demonstrate features of Emacs and demonstrate introductory and intermediate usage.
+
+*** Audience
+ - Authors
+ - Programmers
+ - Hobbiests
+ - Professionals
+ - The curious!
+* Read
+Reading is important.  Don't assume a complex system like Emacs will come to you naturally.  Learning Emacs is worth it, but it does require some effort.
+
+** Emacs is "Self Documenting".
+In general, C-h will get you some form of help.  Use help religiously to learn your way around the system.
+
+Use C-h r to access the Emacs Manual.  Reference it often!  Anytime you're tempted to search the web, use C-h r instead!
+
+** Emacs Wiki
+The gathering place for all things Emacs.
+
+http://emacswiki.org
+
+* Understand Your Goals
+You're here because you're curious or want to learn Emacs.  Why?
+
+I've developed five categories of Emacs knowledge:
+ 
+ 1. Common
+    This knowledge applies to most everything you'll do in Emacs
+
+    - Managing Buffers - renaming, killing, narrowing, etc.
+    - Cursor movement
+    - Invoking commands
+    - Line numbering
+    - Syntax highlighting
+    - Color themes
+
+ 2. Programming
+    Programming tasks in Emacs that don't involve modifying Emacs itself
+
+    - Extremely broad language support
+      - C, C++, Java, Clojure, Scala, Ruby, Python, Perl, Oz, OCaml, HTML, Javascript, Scheme, Lisp
+    - For dynamic languages, extremely robust REPL support
+    - Compilation, debugging, execution
+    - Version control
+
+ 3. Writing
+    Authoring documents in a spoken (non-programming) language
+
+    - Outline processing, LaTeX, HTML, Docbook, reStructuredText
+    - Spell checking
+    - Converting source formats to final products
+    - Version control
+
+ 4. Utilities
+    Using Emacs as an environment for utilities like file management, shell access, reading mail and news, etc.
+
+    - Dired (the directory editor), Sunrise Commander, term, shell and eshell, calc, tons more
+    - Org-Mode deserves special mention.  An entire undergraduate degree should be dedicated to Org-Mode.
+
+ 5. Meta
+    Emacs usage designed to modify Emacs usage.
+
+    - Elisp programming, customization, initialization, macros, installing third party-packages
+
+* Conclusion
+I hope to eventually cover all these topics, but your feedback is tremendously important so I know what people want covered.
+
+Thanks!
+
+Rick
+rpdillon@etherplex.org

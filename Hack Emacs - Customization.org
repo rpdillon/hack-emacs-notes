@@ -1,0 +1,31 @@
+* Customizing Emacs' Behavior
+  There are essentially three ways to approach this:
+  1. Use the customization system
+  2. Create a .emacs file
+  3. Use the .emacs.d/ directory structure
+
+* Customization - Using the Menu System
+  - Most of the things you want to change when you first start using Emacs can be adjusted using the customization system.  
+  - To browse customization options, simply use M-x customize
+  - Examples:
+    - Ido Mode
+    - Global Visual Line Mode
+
+* Customization - Using Direct Variable Access
+  - When you know the variable you want to modify, use M-x customize-variable.
+  - Examples:
+    - global-linum-mode
+    - column-number-mode
+
+* Searching for Concepts Using Apropos
+  - Works in a similar fashion to the *nix command 'apropos'.
+  - If you know a /concept/ that you want to explore in the customization system, use M-x customize-apropos
+
+  - Examples:
+    - cursor
+    - blink
+    - backup
+
+* How Does It Work?
+  - Modes in Emacs can specify key variable that users might want to change, and these appear within the customize system.
+  - The customize system automatically writes elisp code to your initialization file to reflect the changes you make using the customize interface.
